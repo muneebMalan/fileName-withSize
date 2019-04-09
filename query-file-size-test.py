@@ -1,5 +1,5 @@
 import psycopg2
-from SecondProject import fileSize
+from SecondProject import fileSizeTest
 
 def create_table():
     conn = psycopg2.connect("dbname='file size' user='postgres' password='postgres123' host='localhost' port='5432'")
@@ -17,7 +17,7 @@ def insert(file_name, file_size):
 
 create_table()
 
-file = fileSize.get_dir_size("C:/Users/Mono/Desktop/test")
+file = fileSizeTest.get_dir_size("C:/Users/Mono/Desktop/test")
 name_of_file = file[0]
 size_of_file = file[1]
 
