@@ -1,5 +1,5 @@
 import os
-from SecondProject import queryFileSize
+import queryFileSize
 
 def get_dir_size(path):
     size_in_bytes = 0
