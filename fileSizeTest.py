@@ -1,7 +1,9 @@
 import os
+from SecondProject import queryFileSizeTest
 
 def get_dir_size(path):
     size_in_bytes = 0
+
     for dirpath, dirnames, filenames in os.walk(path, topdown=True):
         for filename in filenames:
             full_path = os.path.join(dirpath, filename)
@@ -10,3 +12,12 @@ def get_dir_size(path):
     name_of_file = path.rsplit('/', 1)[1]
 
     return name_of_file, size_in_megabytes
+
+file = get_dir_size("C:/Users/Mono/Desktop/test")
+name_of_file = file[0]
+size_of_file = file[1]
+
+queryFileSizeTest.create_table()
+queryFileSizeTest.insert(name_of_file, size_of_file)
+
+print("The data was sent to the database")

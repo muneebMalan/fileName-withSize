@@ -1,4 +1,5 @@
 import os
+from SecondProject import queryFileSize
 
 def get_dir_size(path):
     size_in_bytes = 0
@@ -12,4 +13,11 @@ def get_dir_size(path):
     name_of_file = path.rsplit('/', 1)[1]
     return name_of_file, size_in_megabytes
 
-print(get_dir_size("C:/Users/Mono/Desktop/DevOps/SecondProject"))
+file = get_dir_size("C:/Users/Mono/Desktop/test size")
+name_of_file = file[0]
+size_of_file = file[1]
+
+queryFileSize.create_table()
+queryFileSize.insert(name_of_file, size_of_file)
+
+print("The data was sent to the database")
