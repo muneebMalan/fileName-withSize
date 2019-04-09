@@ -1,6 +1,8 @@
 import os
 import queryFileSize
 
+path_from_user = input("Enter the directory\n")
+
 def get_dir_size(path):
     size_in_bytes = 0
 
@@ -13,7 +15,7 @@ def get_dir_size(path):
     name_of_file = path.rsplit('/', 1)[1]
     return name_of_file, size_in_megabytes
 
-file = get_dir_size("C:/Users/Mono/Desktop/test size")
+file = get_dir_size(path_from_user)
 name_of_file = file[0]
 size_of_file = file[1]
 
