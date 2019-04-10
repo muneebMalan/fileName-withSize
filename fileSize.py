@@ -1,7 +1,7 @@
 import os
 import queryFileSize
 
-path_from_user = input("Enter the directory\n")
+path_from_user = os.getenv("path")
 
 def get_dir_size(path):
     size_in_bytes = 0
