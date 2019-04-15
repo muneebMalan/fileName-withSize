@@ -1,4 +1,6 @@
 import queryFileSizeTest
 import os
-
-queryFileSizeTest.view(os.getenv("muneeb"))
+try:
+    queryFileSizeTest.view(os.getenv("muneeb"))
+except:
+    print("That file is not in the database")
