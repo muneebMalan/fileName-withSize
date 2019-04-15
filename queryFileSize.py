@@ -13,5 +13,3 @@ def insert(file_name, file_size):
     cursor.execute("INSERT INTO file VALUES(%s, %s)", (file_name, file_size))
     conn.commit()
     conn.close()
-
-create_table()

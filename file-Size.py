@@ -1,7 +1,8 @@
 import os
 import queryFileSize
+import sys
 
-path_from_user = os.getenv("path")
+path_from_user = sys.argv[1]
 
 def get_dir_size(path):
     size_in_bytes = 0
@@ -22,4 +23,4 @@ size_of_file = file[1]
 queryFileSize.create_table()
 queryFileSize.insert(name_of_file, size_of_file)
 
-print("The data was sent to the database")
+print(file)
